@@ -6,10 +6,10 @@ import os
 
 def lambda_handler(event, context):
     session = boto3.Session(
-        profile_name=''
+        profile_name=""
     )
     S3BucketName = ""
-    
+    region = ""
     
     print  (S3BucketName)
     client = session.client('cur', 'us-east-1')
@@ -27,7 +27,7 @@ def lambda_handler(event, context):
             ],
           'S3Bucket': '%s' %S3BucketName,
           'S3Prefix': 'CUR/CUR',
-          'S3Region': 'eu-west-1',
+          'S3Region': '%s' %region,
           'ReportVersioning': 'OVERWRITE_REPORT',
           'AdditionalArtifacts': [
               'ATHENA',
