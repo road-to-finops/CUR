@@ -18,6 +18,7 @@ create a user with the polciy in the userpolicy.json file
 ## Create Profile
 Using the users access keys from above create a profile with the AWS Cli:
 >> aws configure --profile <profile name>
+
 AWS Access Key ID [None]: 
 AWS Secret Access Key [None]: 
 Default region name [None]: 
